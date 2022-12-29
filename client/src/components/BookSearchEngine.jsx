@@ -2,18 +2,18 @@
 import React, { useState } from "react";
 import BookSearchBox from "./BookSearchBox";
 import BookTableList from "./BookTableList";
-import { GetBookByAuthor, GetBookByCategory, GetBookByISBN, GetBookByTitle, GetBookByType } from "../api/bookStoreApi";
+import { getBookByAuthor, getBookByCategory, getBookByISBN, getBookByTitle, getBookByType } from "../api/bookStoreApi";
 
 export default props => {
 
     const [books, setBooks] = useState();
 
     const apiFunctionDict = {
-        'author': v=>GetBookByAuthor(v),
-        'title': v=>GetBookByTitle(v),
-        'category': v=>GetBookByCategory(v),
-        'isbn': v=>GetBookByISBN(v),
-        'type': v=>GetBookByType(v),
+        'author': v=>getBookByAuthor(v),
+        'title': v=>getBookByTitle(v),
+        'category': v=>getBookByCategory(v),
+        'isbn': v=>getBookByISBN(v),
+        'type': v=>getBookByType(v),
     };
 
     function findBooks(prop, val){
