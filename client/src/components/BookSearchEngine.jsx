@@ -17,7 +17,6 @@ export default props => {
     };
 
     function findBooks(prop, val){
-        console.log(prop, val);
         apiFunctionDict[prop.toLowerCase()](val).then(r => setBooks(r));
     }
 

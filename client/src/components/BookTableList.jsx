@@ -4,7 +4,6 @@ import './BookTableList.css'
 import React, { useState } from "react";
 
 export default props => {
-    console.log(props)
     return (
         <React.Fragment>
             <table id="table-books">
