@@ -1,11 +1,11 @@
 /* eslint-disable import/no-anonymous-default-export */
 
 import './BookTableList.css'
-import React, { useState } from "react";
+import {React, Fragment } from "react";
 
 export default props => {
     return (
-        <React.Fragment>
+        <Fragment>
             <table id="table-books">
                 <thead>
                     <tr>
@@ -40,6 +40,6 @@ export default props => {
             {props.books === undefined || props.books.length === 0 ? 
                 <div><p id="no-books-warning">No books found!</p></div> : 
                 <div></div>}
-        </React.Fragment>
+        </Fragment>
     );
 }

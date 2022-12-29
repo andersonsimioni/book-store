@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, { useState } from "react";
+import {React, Fragment, useState} from "react";
 import BookSearchBox from "./BookSearchBox";
 import BookTableList from "./BookTableList";
 import { getBookByAuthor, getBookByCategory, getBookByISBN, getBookByTitle, getBookByType } from "../api/bookStoreApi";
@@ -21,9 +21,9 @@ export default props => {
     }
 
     return (
-        <React.Fragment>
+        <Fragment>
             <BookSearchBox findBooks={findBooks}></BookSearchBox>
             <BookTableList books={books}></BookTableList>
-        </React.Fragment>
+        </Fragment>
     )
 }

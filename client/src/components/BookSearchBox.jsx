@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, { useState } from "react";
+import {React, useState } from "react";
 
 export default props => {
     const [val, setVal] = useState();
